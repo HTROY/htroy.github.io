@@ -108,7 +108,7 @@
 <meta property="og:site_name" content="HTROY&#39;s Blog">
 <meta property="og:description" content="如何在Windows上优雅的使用Spacemacs？这是个问题。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-03T07:23:27.988Z">
+<meta property="og:updated_time" content="2018-01-18T03:24:24.569Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何在Windows上优雅的使用Spacemacs(一)">
 <meta name="twitter:description" content="如何在Windows上优雅的使用Spacemacs？这是个问题。">
@@ -123,6 +123,7 @@
 
   <title>如何在Windows上优雅的使用Spacemacs(一) | HTROY's Blog</title>
   
+
 
 
 
@@ -370,7 +371,7 @@
 <h3 id="sec-1-1"><span class="section-number-3">1.1</span> Emacs和Vim，一场永无止境的“圣战”</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
-自古以来，江湖中流传着两大门派，Emacs和Vim
+自古以来，江湖中流传着两大门派，Emacs派和Vim派，这两大派之间关于谁是最好用的编辑器这个问题，一直以来，“战争”不断。
 </p>
 </div>
 </div>
@@ -382,7 +383,15 @@ Spacemacs不是什么新的软件，它只是Emacs的一个配置；但是，为
 </p>
 
 <p>
-首先
+首先他把Emacs和Vim的优点结合起来，使得Spacemacs既有了Emacs超强的可扩展性，又有了Vim的键位的实用性，让我的小拇指得到解放:P。
+</p>
+
+<p>
+第二Spacemacs是社区驱动的，这使得他的文档和支持都很完善，遇到问题可以很方便地和其他使用者交流，解决。
+</p>
+
+<p>
+基于以上原因，便让我有了学习并使用Spacmacs的动力。
 </p>
 </div>
 </div>
@@ -426,25 +435,49 @@ Spacemacs默认生成一个.spaceamcs文件，它是Spacemacs的默认配置文�
 <div class="outline-text-2" id="text-3">
 <blockquote>
 <p>
-On MS-Windows, the installation program addpm.exe adds values for emacs<sub>dir</sub>, EMACSLOADPATH, EMACSDATA, EMACSPATH, EMACSDOC, SHELL and TERM to the HKEY<sub>LOCAL</sub><sub>MACHINE</sub> section of the system registry, under /Software/GNU/Emacs. It does this because there is no standard place to set environment variables across different versions of Windows. Running addpm.exe is no longer strictly necessary in recent versions of Emacs, but if you are upgrading from an older version, running addpm.exe ensures that you do not have older registry entries from a previous installation, which may not be compatible with the latest version of Emacs.
+On MS-Windows, the installation program addpm.exe adds values for emacs_dir, EMACSLOADPATH, EMACSDATA, EMACSPATH, EMACSDOC, SHELL and TERM to the HKEY_LOCAL_MACHINE section of the system registry, under /Software/GNU/Emacs. It does this because there is no standard place to set environment variables across different versions of Windows. Running addpm.exe is no longer strictly necessary in recent versions of Emacs, but if you are upgrading from an older version, running addpm.exe ensures that you do not have older registry entries from a previous installation, which may not be compatible with the latest version of Emacs.
 </p>
 
 <p>
-When Emacs starts, as well as checking the environment, it also checks the System Registry for those variables and for HOME, LANG and PRELOAD<sub>WINSOCK</sub>.
+When Emacs starts, as well as checking the environment, it also checks the System Registry for those variables and for HOME, LANG and PRELOAD_WINSOCK.
 </p>
 
 <p>
-To determine the value of those variables, Emacs goes through the following procedure. First, the environment is checked. If the variable is not found there, Emacs looks for registry keys by that name under /Software/GNU/Emacs; first in the HKEY<sub>CURRENT</sub><sub>USER</sub> section of the registry, and if not found there, in the HKEY<sub>LOCAL</sub><sub>MACHINE</sub> section. Finally, if Emacs still cannot determine the values, compiled-in defaults are used.
+To determine the value of those variables, Emacs goes through the following procedure. First, the environment is checked. If the variable is not found there, Emacs looks for registry keys by that name under /Software/GNU/Emacs; first in the HKEY_CURRENT_USER section of the registry, and if not found there, in the HKEY_LOCAL_MACHINE section. Finally, if Emacs still cannot determine the values, compiled-in defaults are used.
 </p>
 
 <p>
 In addition to the environment variables above, you can also add many of the settings which on X belong in the .Xdefaults file (see X Resources) to the /Software/GNU/Emacs registry key.
 </p>
 </blockquote>
+
+<p>
+Emacs在启动时按照如下顺序检查环境变量，第一检查环境变量中的HOME变量，如果不存在，则会搜索注册表中HKEY_CURRENT_USER下的/Software/GNU/Emacs中是否存在HOME这一下，如果不存在，则会检查HKEY_LOCAL_MACHINE这一节的相同位置是否存在HOME变量，当然，我们也可以使用.Xdefaults文件来配置HOME目录。
+</p>
 </div>
 </div>
 
-Last Updated 2017-12-03 周日 15:23.<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="noopener">hexo-renderer-org</a> with <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="noopener">Emacs</a> 25.2.1 (<a href="http://orgmode.org" target="_blank" rel="noopener">Org</a> mode 8.2.10)
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Spacemacs在Windows上的优化</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+由于Emacs是GNU下的一款非常重要的开源软件，一直以来在Linux系统上发展的比较好，后来为了让更多的人使用eamcs，GNU开始发行兼容Windows，Mac的版本，但是要想在Windows上优雅的使用Spacemacs，有些问题还是需要解决的。
+</p>
+</div>
+<div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> 关于中文字体的问题</h3>
+</div>
+<div id="outline-container-sec-4-2" class="outline-3">
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> 以C/S方式运行Spacesmacs</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+Spacmacs每次打开，都要加载很多package，所以加载速度很慢；
+</p>
+</div>
+</div>
+</div>
+
+Last Updated 2018-01-18 周四 11:24.<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="noopener">hexo-renderer-org</a> with <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="noopener">Emacs</a> 25.2.1 (<a href="http://orgmode.org" target="_blank" rel="noopener">Org</a> mode 8.2.10)
 
       
     </div>
@@ -579,7 +612,7 @@ Last Updated 2017-12-03 周日 15:23.<br>Render by <a href="https://github.com/C
                 
                 <div class="site-state-item site-state-categories">
                   <a href="/categories/index.html">
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -590,7 +623,7 @@ Last Updated 2017-12-03 周日 15:23.<br>Render by <a href="https://github.com/C
                 
                 <div class="site-state-item site-state-tags">
                   <a href="/tags/index.html">
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -623,7 +656,7 @@ Last Updated 2017-12-03 周日 15:23.<br>Render by <a href="https://github.com/C
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#sec-1"><span class="nav-number">1.</span> <span class="nav-text">1 Spacemacs是什么？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-1-1"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 Emacs和Vim，一场永无止境的“圣战”</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-1-2"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 为什么使用Spacemacs？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sec-2"><span class="nav-number">2.</span> <span class="nav-text">2 Spaceemacs入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-2-1"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 安装Spacemacs</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sec-3"><span class="nav-number">3.</span> <span class="nav-text">3 关于HOME环境变量</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#sec-1"><span class="nav-number">1.</span> <span class="nav-text">1 Spacemacs是什么？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-1-1"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 Emacs和Vim，一场永无止境的“圣战”</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-1-2"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 为什么使用Spacemacs？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sec-2"><span class="nav-number">2.</span> <span class="nav-text">2 Spaceemacs入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-2-1"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 安装Spacemacs</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sec-3"><span class="nav-number">3.</span> <span class="nav-text">3 关于HOME环境变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sec-4"><span class="nav-number">4.</span> <span class="nav-text">4 Spacemacs在Windows上的优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-4-1"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 关于中文字体的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-4-2"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 以C/S方式运行Spacesmacs</span></a></li></ol></li></ol></div>
             
 
           </div>
