@@ -49,19 +49,19 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=6.0.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.0.4" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.4">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.4">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.4">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=6.0.1" color="#222">
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.4" color="#222">
 
 
 
@@ -76,7 +76,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    version: '6.0.1',
+    version: '6.0.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
     fastclick: false,
@@ -94,14 +94,17 @@
 </script>
 
 
+  
+
+
 
 
   
-  <meta name="keywords" content="emacs,spacemacs,elisp," />
+  <meta name="keywords" content="emacs,elisp,spacemacs," />
 
 
 <meta name="description" content="如何在Windows上优雅的使用Spacemacs？这是个问题。">
-<meta name="keywords" content="emacs,spacemacs,elisp">
+<meta name="keywords" content="emacs,elisp,spacemacs">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何在Windows上优雅的使用Spacemacs(一)">
 <meta property="og:url" content="http://blog.htroy.cc/2017/10/23/Use-spacemacs-on-windows/index.html">
@@ -121,6 +124,12 @@
   <link rel="canonical" href="http://blog.htroy.cc/2017/10/23/Use-spacemacs-on-windows/"/>
 
 
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
   <title>如何在Windows上优雅的使用Spacemacs(一) | HTROY's Blog</title>
   
 
@@ -206,25 +215,25 @@
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
         </li>
       
         
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags</a>
         </li>
       
         
         <li class="menu-item menu-item-categories">
           <a href="/categories/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+            <i class="menu-item-icon fa fa-fw fa-th"></i> <br />Categories</a>
         </li>
       
         
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
         </li>
       
 
@@ -234,6 +243,9 @@
 
   
 </nav>
+
+
+  
 
 
 
@@ -292,11 +304,12 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-23T00:00:00+08:00">2017-10-23</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-23T00:00:00+08:00">2017-10-23</time>
             
 
+            
             
 
             
@@ -311,7 +324,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/spacemacs/" itemprop="url" rel="index"><span itemprop="name">spacemacs</span></a></span>
@@ -481,6 +494,9 @@ Last Updated 2018-01-18 周四 11:24.<br>Render by <a href="https://github.com/C
 
       
     </div>
+
+    
+
     
     
     
@@ -497,9 +513,9 @@ Last Updated 2018-01-18 周四 11:24.<br>Render by <a href="https://github.com/C
           
             <a href="/tags/emacs/" rel="tag"># emacs</a>
           
-            <a href="/tags/spacemacs/" rel="tag"># spacemacs</a>
-          
             <a href="/tags/elisp/" rel="tag"># elisp</a>
+          
+            <a href="/tags/spacemacs/" rel="tag"># spacemacs</a>
           
         </div>
       
@@ -578,10 +594,10 @@ Last Updated 2018-01-18 周四 11:24.<br>Render by <a href="https://github.com/C
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
+            Table of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
+            Overview
           </li>
         </ul>
       
@@ -602,7 +618,7 @@ Last Updated 2018-01-18 周四 11:24.<br>Render by <a href="https://github.com/C
                   <a href="/archives/">
                 
                     <span class="site-state-item-count">2</span>
-                    <span class="site-state-item-name">日志</span>
+                    <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
               
@@ -612,8 +628,20 @@ Last Updated 2018-01-18 周四 11:24.<br>Render by <a href="https://github.com/C
                 
                 <div class="site-state-item site-state-categories">
                   <a href="/categories/index.html">
-                    <span class="site-state-item-count">5</span>
-                    <span class="site-state-item-name">分类</span>
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
               
@@ -623,8 +651,28 @@ Last Updated 2018-01-18 周四 11:24.<br>Render by <a href="https://github.com/C
                 
                 <div class="site-state-item site-state-tags">
                   <a href="/tags/index.html">
-                    <span class="site-state-item-count">7</span>
-                    <span class="site-state-item-name">标签</span>
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
               
@@ -642,6 +690,9 @@ Last Updated 2018-01-18 周四 11:24.<br>Render by <a href="https://github.com/C
           
 
           
+            
+          
+          
 
         </div>
       </section>
@@ -656,7 +707,7 @@ Last Updated 2018-01-18 周四 11:24.<br>Render by <a href="https://github.com/C
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#sec-1"><span class="nav-number">1.</span> <span class="nav-text">1 Spacemacs是什么？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-1-1"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 Emacs和Vim，一场永无止境的“圣战”</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-1-2"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 为什么使用Spacemacs？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sec-2"><span class="nav-number">2.</span> <span class="nav-text">2 Spaceemacs入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-2-1"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 安装Spacemacs</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sec-3"><span class="nav-number">3.</span> <span class="nav-text">3 关于HOME环境变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sec-4"><span class="nav-number">4.</span> <span class="nav-text">4 Spacemacs在Windows上的优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-4-1"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 关于中文字体的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-4-2"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 以C/S方式运行Spacesmacs</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#sec-1"><span class="nav-text">1 Spacemacs是什么？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-1-1"><span class="nav-text">1.1 Emacs和Vim，一场永无止境的“圣战”</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-1-2"><span class="nav-text">1.2 为什么使用Spacemacs？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sec-2"><span class="nav-text">2 Spaceemacs入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-2-1"><span class="nav-text">2.1 安装Spacemacs</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sec-3"><span class="nav-text">3 关于HOME环境变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sec-4"><span class="nav-text">4 Spacemacs在Windows上的优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-4-1"><span class="nav-text">4.1 关于中文字体的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-4-2"><span class="nav-text">4.2 以C/S方式运行Spacesmacs</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -688,7 +739,9 @@ Last Updated 2018-01-18 周四 11:24.<br>Render by <a href="https://github.com/C
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
@@ -696,12 +749,13 @@ Last Updated 2018-01-18 周四 11:24.<br>Render by <a href="https://github.com/C
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Mist</a> v6.0.1</div>
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Mist</a> v6.0.4</div>
 
 
 
 
         
+
 
 
 
@@ -776,25 +830,25 @@ Last Updated 2018-01-18 周四 11:24.<br>Render by <a href="https://github.com/C
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=6.0.1"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.4"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=6.0.1"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.0.1"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.4"></script>
 
 
 
   
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.4"></script>
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.1"></script>
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.4"></script>
 
 
 
@@ -875,6 +929,10 @@ Last Updated 2018-01-18 周四 11:24.<br>Render by <a href="https://github.com/C
   
 
   
+
+  
+  
+
   
 
   
